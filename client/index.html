@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forum 简易论坛</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>💬 forum 简易论坛</h1>
+      <p class="subtitle">Node + Express + 原生前端的小小社区</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card composer">
+      <h2>✍️ 发新帖</h2>
+      <form id="new-post-form">
+        <input id="np-title" type="text" placeholder="帖子标题（必填）" maxlength="80" required>
+        <div class="form-row">
+          <input id="np-author" type="text" placeholder="你的昵称（留空则匿名）" maxlength="20">
+          <select id="np-category">
+            <option value="技术">技术</option>
+            <option value="问答">问答</option>
+            <option value="分享">分享</option>
+            <option value="灌水">灌水</option>
+          </select>
+        </div>
+        <textarea id="np-content" rows="4" placeholder="帖子内容（必填）" required></textarea>
+        <button type="submit" class="btn primary">发布帖子</button>
+      </form>
+    </section>
+
+    <section>
+      <div id="filter-bar" class="filter-bar" role="tablist" aria-label="分类筛选"></div>
+      <div id="post-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">forum 简易论坛 · 数据保存在 server/data.json</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
