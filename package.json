@@ -1,0 +1,15 @@
+{
+  "name": "forum",
+  "version": "1.0.0",
+  "description": "forum 简易论坛 —— Node + Express 后端 REST API 与原生前端页面",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
