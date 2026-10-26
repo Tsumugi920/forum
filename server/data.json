@@ -1,0 +1,169 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Node.js 22 的新特性，你们用上了吗？",
+      "author": "阿伟",
+      "category": "技术",
+      "content": "Node 22 默认启用 require(esm)，还有内置的 WebSocket 客户端。我们后端服务刚升级完，性能没什么变化，但开发体验好多了。大家升级踩过什么坑吗？",
+      "likes": 12,
+      "replies": [
+        {
+          "id": 1,
+          "author": "小林",
+          "content": "升级很顺利，就是有个老依赖用了废弃的 API，打了个补丁。",
+          "createdAt": "2026-10-20T09:12:00.000Z"
+        },
+        {
+          "id": 2,
+          "author": "老张",
+          "content": "require(esm) 真香，配置文件终于可以统一用 ESM 写了。",
+          "createdAt": "2026-10-21T14:30:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-19T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "请问 Express 怎么优雅地做错误处理？",
+      "author": "萌新小白",
+      "category": "问答",
+      "content": "现在每个路由里都是 try/catch，代码又长又重复。有没有什么中间件或者模式可以把错误统一收集处理？",
+      "likes": 5,
+      "replies": [
+        {
+          "id": 1,
+          "author": "阿伟",
+          "content": "写一个统一的错误中间件 app.use((err, req, res, next) => {...}) 放在路由最后，路由里 next(err) 抛出去就行。",
+          "createdAt": "2026-10-18T10:05:00.000Z"
+        },
+        {
+          "id": 2,
+          "author": "皮蛋",
+          "content": "异步路由可以用 express-async-errors 这个包，或者 Express 5 自带支持。",
+          "createdAt": "2026-10-18T12:40:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-17T20:15:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "分享一个我写的番茄钟小工具",
+      "author": "皮蛋",
+      "category": "分享",
+      "content": "周末用原生 JS 写了个番茄钟，纯前端无依赖，可以自定义工作/休息时长，还有统计面板。代码已放 GitHub，求指点。",
+      "likes": 23,
+      "replies": [
+        {
+          "id": 1,
+          "author": "小林",
+          "content": "界面挺好看的，建议加个键盘快捷键暂停。",
+          "createdAt": "2026-10-16T09:00:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-15T18:30:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "数据库选 MySQL 还是 PostgreSQL？",
+      "author": "纠结的人",
+      "category": "问答",
+      "content": "新项目要做用户系统和订单，团队之前只用过 MySQL。看到网上都说 PG 现在是默认答案，有点纠结。求实际用过的朋友给点建议。",
+      "likes": 8,
+      "replies": [
+        {
+          "id": 1,
+          "author": "老张",
+          "content": "团队熟 MySQL 就先用 MySQL，别为了潮流给自己加学习成本。",
+          "createdAt": "2026-10-14T11:20:00.000Z"
+        },
+        {
+          "id": 2,
+          "author": "阿伟",
+          "content": "PG 的 JSONB 和全文检索很好用，新项目我一般选 PG。",
+          "createdAt": "2026-10-14T13:45:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-13T16:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "今天把博客的评论系统换成自建的了",
+      "author": "小林",
+      "category": "分享",
+      "content": "之前用第三方评论服务，说关就关。这次用 Express + SQLite 自己写了一个，支持 Markdown 和邮件通知，总共也就三百来行代码，成就感满满。",
+      "likes": 17,
+      "replies": [],
+      "createdAt": "2026-10-12T10:10:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "CSS 的 :has() 选择器真的太方便了",
+      "author": "老张",
+      "category": "技术",
+      "content": "以前要靠 JS 给父元素加类名的交互，现在一行 :has() 就搞定，比如「表单里有无效输入时按钮置灰」。现代浏览器基本都支持了，可以放心用。",
+      "likes": 9,
+      "replies": [
+        {
+          "id": 1,
+          "author": "皮蛋",
+          "content": "配合 grid 布局做卡片悬停效果也很爽。",
+          "createdAt": "2026-10-11T15:25:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-11T09:40:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "中午吃什么，在线等，挺急的",
+      "author": "干饭人",
+      "category": "灌水",
+      "content": "公司楼下就三家店：兰州拉面、黄焖鸡、沙县小吃。已经连吃两周拉面了，今天必须换一个，大家投个票。",
+      "likes": 31,
+      "replies": [
+        {
+          "id": 1,
+          "author": "萌新小白",
+          "content": "投黄焖鸡，记得加土豆。",
+          "createdAt": "2026-10-10T11:50:00.000Z"
+        },
+        {
+          "id": 2,
+          "author": "干饭人",
+          "content": "好了我吃了沙县，拌面加蛋，真香。",
+          "createdAt": "2026-10-10T12:35:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-10T11:30:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "写代码时你们听什么？求歌单推荐",
+      "author": "摸鱼选手",
+      "category": "灌水",
+      "content": "专注写代码的时候听带歌词的歌容易分心，求一些适合编程的纯音乐歌单，Lo-fi、电子、钢琴都可以。",
+      "likes": 14,
+      "replies": [
+        {
+          "id": 1,
+          "author": "小林",
+          "content": "推荐 Lo-fi beats 那个经典歌单，一听就是一下午。",
+          "createdAt": "2026-10-09T14:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "author": "阿伟",
+          "content": "游戏原声也很合适，本来就是为长时间专注设计的。",
+          "createdAt": "2026-10-09T15:10:00.000Z"
+        },
+        {
+          "id": 3,
+          "author": "老张",
+          "content": "白噪音党路过，雨声 + 键盘声。",
+          "createdAt": "2026-10-09T16:20:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-09T13:00:00.000Z"
+    }
+  ]
+}
